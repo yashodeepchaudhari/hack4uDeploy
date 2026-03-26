@@ -11,7 +11,7 @@ const slides = [
   {
     id: "intro",
     icon: Wifi,
-    title: "Welcome to Singularity",
+    title: "Welcome to Hacker Logs",
     subtitle: "Wearable Biomechanical Monitoring System",
     description: "A low-cost, real-time system that captures subtle joint movements using graphene-coated flex sensors. Let's walk through how it works.",
     visual: "intro",

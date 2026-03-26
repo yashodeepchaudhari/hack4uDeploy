@@ -39,7 +39,7 @@ export default function Navbar({ activeSection, onNavigate, connected }: NavbarP
               <Zap className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="text-lg font-bold text-foreground tracking-tight">
-              Singularity
+              Hacker Logs
             </span>
           </button>
 

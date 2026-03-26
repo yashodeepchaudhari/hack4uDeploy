@@ -123,7 +123,7 @@ export default function SystemArchitecture({ data }: SystemArchitectureProps) {
           </div>
           <div className="mt-6 pt-4 border-t border-border/50">
             <p className="text-xs text-muted-foreground text-center">
-              Team: Singularity • Umed, Ridhlesh, Lokesh, Mayur
+              Team: Hacker Logs • Umed, Ridhlesh, Lokesh, Yashodeep, Mayur
             </p>
           </div>
         </motion.div>
