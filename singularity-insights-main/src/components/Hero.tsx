@@ -55,7 +55,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight">
-              <span className="text-gradient">Singularity:</span>
+              <span className="text-gradient">Hacker Logs:</span>
               <br />
               <span className="text-foreground">Wearable Biomechanical</span>
               <br />
