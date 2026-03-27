@@ -11,11 +11,12 @@ interface SystemArchitectureProps {
 }
 
 const steps = [
-  { icon: Move, label: "Physical Motion", desc: "Joint bending detected" },
-  { icon: Radio, label: "Sensor Deformation", desc: "Flex sensor responds" },
-  { icon: TrendingDown, label: "Resistance Change", desc: "Ohmic value shifts" },
-  { icon: Cpu, label: "ESP32 Module", desc: "ADC sampling at 10-bit" },
-  { icon: Monitor, label: "Digital Dashboard", desc: "Real-time visualization" },
+  { icon: Move, label: "Mechanical Motion", desc: "Joint movement detection" },
+  { icon: Radio, label: "Sensor Deformation", desc: "CNT/graphite matrix response" },
+  { icon: TrendingDown, label: "Resistance Change", desc: "Electrical resistance shifts" },
+  { icon: PlugZap, label: "Voltage Signal", desc: "Analog voltage output" },
+  { icon: Cpu, label: "ADC Conversion", desc: "12-bit digital sampling" },
+  { icon: Monitor, label: "Python Visualization", desc: "Real-time data processing" },
 ];
 
 export default function SystemArchitecture({ data }: SystemArchitectureProps) {
@@ -123,7 +124,10 @@ export default function SystemArchitecture({ data }: SystemArchitectureProps) {
           </div>
           <div className="mt-6 pt-4 border-t border-border/50">
             <p className="text-xs text-muted-foreground text-center">
-              Team: Hacker Logs • Umed, Ridhlesh, Lokesh, Yashodeep, Mayur
+              Team: Singularity • Umed Indulkar, Riddhesh Budha, Lokesh Khodke, Mayur Chaudhari
+            </p>
+            <p className="text-xs text-muted-foreground text-center mt-1">
+              COLOHACKS 2026 - Hardware Track
             </p>
           </div>
         </motion.div>

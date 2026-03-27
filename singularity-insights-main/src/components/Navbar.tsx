@@ -1,24 +1,23 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Wifi, WifiOff, User, Menu, X, Zap } from "lucide-react";
+import { User, Menu, X, Zap } from "lucide-react";
 
 const navItems = [
   { label: "Home", id: "home" },
+  { label: "Research", id: "research" },
+  { label: "Prototypes", id: "prototypes" },
   { label: "Dashboard", id: "dashboard" },
   { label: "1D Model", id: "sensor-model" },
   { label: "Analytics", id: "analytics" },
   { label: "System", id: "system" },
-  { label: "Reports", id: "reports" },
-  { label: "Contact", id: "contact" },
 ];
 
 interface NavbarProps {
   activeSection: string;
   onNavigate: (id: string) => void;
-  connected: boolean;
 }
 
-export default function Navbar({ activeSection, onNavigate, connected }: NavbarProps) {
+export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -39,7 +38,7 @@ export default function Navbar({ activeSection, onNavigate, connected }: NavbarP
               <Zap className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="text-lg font-bold text-foreground tracking-tight">
-              Hacker Logs
+              Singularity
             </span>
           </button>
 
@@ -62,19 +61,6 @@ export default function Navbar({ activeSection, onNavigate, connected }: NavbarP
 
           {/* Right side */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5 text-xs">
-              {connected ? (
-                <>
-                  <Wifi className="w-3.5 h-3.5 text-success" />
-                  <span className="hidden sm:inline text-success font-medium">Connected</span>
-                </>
-              ) : (
-                <>
-                  <WifiOff className="w-3.5 h-3.5 text-destructive" />
-                  <span className="hidden sm:inline text-destructive font-medium">Offline</span>
-                </>
-              )}
-            </div>
             <div className="w-px h-5 bg-border hidden sm:block" />
             <button className="w-8 h-8 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors">
               <User className="w-4 h-4 text-muted-foreground" />

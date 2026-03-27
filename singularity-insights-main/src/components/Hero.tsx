@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Wifi, ArrowDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import BiomechanicalModel from "./BiomechanicalModel";
 
 interface HeroProps {
@@ -48,23 +48,17 @@ export default function Hero({ onNavigate }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-8 text-sm">
-              <Wifi className="w-3.5 h-3.5 text-success" />
-              <span className="text-success font-medium">WiFi Connected</span>
-              <span className="text-muted-foreground">• Real-time Monitoring</span>
-            </div>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight">
-              <span className="text-gradient">Hacker Logs:</span>
+              <span className="text-gradient">Singularity:</span>
               <br />
-              <span className="text-foreground">Wearable Biomechanical</span>
+              <span className="text-foreground">Bio-Mechanical Orthokinetic</span>
               <br />
-              <span className="text-foreground">Monitoring</span>
+              <span className="text-foreground">Measuring Belt</span>
             </h1>
 
             <p className="text-muted-foreground text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-              A low-cost, real-time system for capturing subtle joint movements
-              and motion dynamics to prevent injuries.
+              Bridging the biomechanical tracking gap with metal-free CNT/graphite sensors. 
+              Real-time joint deformation monitoring with 200ms response time and 140° dynamic range.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">

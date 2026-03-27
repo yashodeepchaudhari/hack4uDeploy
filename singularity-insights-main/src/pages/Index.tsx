@@ -1,6 +1,8 @@
 import { useCallback, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Research from "@/components/Research";
+import Prototypes from "@/components/Prototypes";
 import Dashboard from "@/components/Dashboard";
 import SensorModel from "@/components/SensorModel";
 import Analytics from "@/components/Analytics";
@@ -31,9 +33,10 @@ export default function Index() {
       <Navbar
         activeSection={activeSection}
         onNavigate={handleNavigate}
-        connected={true}
       />
       <Hero onNavigate={handleNavigate} />
+      <Research onNavigate={handleNavigate} />
+      <Prototypes onNavigate={handleNavigate} />
       <SensorModel data={data} graphData={graphData} />
       <Dashboard
         data={data}
