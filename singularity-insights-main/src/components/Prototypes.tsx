@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { AlertTriangle, TrendingUp, Award, ArrowRight } from "lucide-react";
+import { AlertTriangle, TrendingUp, Award, ArrowRight, Zap } from "lucide-react";
 
 interface PrototypesProps {
   onNavigate: (id: string) => void;
@@ -42,35 +42,33 @@ export default function Prototypes({ onNavigate }: PrototypesProps) {
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold">M1</span>
                     </div>
-                    <h2 className="text-2xl font-bold">Mark 1: Initial Proof of Concept</h2>
+                    <h2 className="text-2xl font-bold">Mark 1: The Proof of Concept (Discovery of the Reverse Effect)</h2>
                   </div>
                   
                   <div className="space-y-4">
                     <div>
                       <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-orange-500" />
-                        The Design
+                        <TrendingUp className="w-5 h-5 text-blue-500" />
+                        The Validation
                       </h3>
                       <p className="text-muted-foreground">
-                        A mechanically rough, thick deformable conductive medium that validated the core concept.
+                        Our first prototype validated that mechanical bending could be translated into digital signals using a low-cost deformable medium.
                       </p>
                     </div>
 
                     <div>
                       <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
-                        <TrendingUp className="w-5 h-5 text-blue-500" />
-                        The Data
+                        <Zap className="w-5 h-5 text-orange-500" />
+                        The Findings
                       </h3>
                       <p className="text-muted-foreground">
-                        Validated that bending could be measured. However, it showed significant hysteresis 
-                        (the signal did not return to the original baseline), making it poor for repetition counting.
+                        We observed a unique "Reverse Effect"—as the joint bends, graphite granules are compressed and interlock, creating a stronger path for current and reducing resistance.
                       </p>
                     </div>
 
                     <div className="p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg border-l-4 border-orange-500">
                       <p className="text-sm font-medium text-orange-700 dark:text-orange-300">
-                        <strong>Key Finding:</strong> Sharp increases upon touch (Forward Relationship) 
-                        followed by a deep drop (Reverse Effect) as graphite granules interlocked.
+                        <strong>The Technical Gap:</strong> While functional, Mark 1 exhibited significant hysteresis (the signal did not return to the baseline) and "unexpected dips" caused by mechanical noise and abnormal folding of the prototype walls.
                       </p>
                     </div>
                   </div>
@@ -147,51 +145,33 @@ export default function Prototypes({ onNavigate }: PrototypesProps) {
                     <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold">M3</span>
                     </div>
-                    <h2 className="text-2xl font-bold">Mark 3: The Breakthrough Success</h2>
+                    <h2 className="text-2xl font-bold">Mark 3: The High-Performance Iteration (Precision & Stability)</h2>
                   </div>
                   
                   <div className="space-y-4">
                     <div>
                       <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
                         <Award className="w-5 h-5 text-green-500" />
-                        The Design
+                        The Breakthrough
                       </h3>
                       <p className="text-muted-foreground">
-                        A high-performance iteration achieving a critical balance between material distribution 
-                        and mechanical stability.
+                        Mark 3 represents the transition from a rough concept to a reliable sensing module, balancing flexibility with electrical stability.
                       </p>
                     </div>
 
                     <div>
                       <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
                         <TrendingUp className="w-5 h-5 text-green-500" />
-                        The Data (Mark 3 Results)
+                        Bimodal Response
                       </h3>
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <p className="text-sm text-muted-foreground">
-                            <strong>Minimal Hysteresis:</strong> Resistance reliably returns to baseline after bending and relaxation
-                          </p>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                          <p className="text-sm text-muted-foreground">
-                            <strong>Slight Forward Relation:</strong> At low angles, detects subtle bends (resistance increase)
-                          </p>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                          <p className="text-sm text-muted-foreground">
-                            <strong>Stable Reverse Effect:</strong> At major angles, consistent signal for high-intensity movement
-                          </p>
-                        </div>
-                      </div>
+                      <p className="text-muted-foreground">
+                        It provides a "Slight Forward Relation" (resistance increase) for subtle, low-angle bends, while the stable "Reverse Effect" takes over for major joint movements.
+                      </p>
                     </div>
 
                     <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-500">
                       <p className="text-sm font-medium text-green-700 dark:text-green-300">
-                        <strong>Success:</strong> Achieved the perfect balance of flexibility, stability, and accuracy!
+                        <strong>The Success:</strong> Most importantly, Mark 3 achieved minimal hysteresis. The signal reliably returns to its original baseline after relaxation, enabling accurate repetition counting and long-term strain monitoring.
                       </p>
                     </div>
                   </div>

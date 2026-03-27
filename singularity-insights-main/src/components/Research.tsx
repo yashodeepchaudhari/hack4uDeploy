@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Zap, Activity, Cpu, Gauge, ExternalLink, FileText } from "lucide-react";
+import { Zap, Activity, Cpu, Gauge, ExternalLink, FileText, RotateCw } from "lucide-react";
 
 interface ResearchProps {
   onNavigate: (id: string) => void;
@@ -19,7 +19,7 @@ export default function Research({ onNavigate }: ResearchProps) {
             Research Paper & Technical Foundation
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Bridging the Biomechanical Tracking Gap with cutting-edge sensor technology
+            Bridging the Biomechanical Tracking Gap through Soft-Material Innovation
           </p>
         </motion.div>
 
@@ -39,8 +39,7 @@ export default function Research({ onNavigate }: ResearchProps) {
                   Traditional Motion Analysis
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Lab-bound and expensive systems that require specialized equipment and controlled environments. 
-                  Not suitable for real-world applications or continuous monitoring.
+                  Systems are prohibitively expensive, computationally complex, and restricted to controlled laboratory environments.
                 </p>
               </div>
               <div>
@@ -49,16 +48,41 @@ export default function Research({ onNavigate }: ResearchProps) {
                   Standard Wearables
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Only track cardiovascular metrics and basic movement. Cannot monitor joint deformation 
-                  and muscle strain in real-time without rigid, metal-based sensors.
+                  Mass-market devices monitor cardiovascular metrics (e.g., heart rate) but lack the capability to capture mechanical joint behavior or muscle strain.
                 </p>
               </div>
             </div>
             <div className="mt-8 p-6 bg-primary/10 rounded-xl border-l-4 border-primary">
               <p className="text-lg font-medium">
-                <strong>Our Gap:</strong> The inability to monitor joint deformation and muscle strain in real-time 
-                without rigid, metal-based sensors that cause signal noise and discomfort.
+                <strong>Consequence:</strong> Because clinical-grade tracking is "lab-bound," fatigue and abnormal movement patterns are typically identified only after a physical injury has occurred.
               </p>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-2xl font-bold mb-6 text-primary">The Technical Gap</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                Current wearable sensing technology is hindered by two primary barriers:
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="p-6 bg-destructive/5 rounded-xl border-l-4 border-destructive">
+                  <h4 className="text-lg font-semibold mb-3 text-destructive flex items-center gap-2">
+                    <Zap className="w-5 h-5" />
+                    Material Rigidity
+                  </h4>
+                  <p className="text-muted-foreground">
+                    Traditional sensors often utilize metal electrodes which cause signal artifacts (noise), corrosion, and physical discomfort during movement.
+                  </p>
+                </div>
+                <div className="p-6 bg-warning/5 rounded-xl border-l-4 border-warning">
+                  <h4 className="text-lg font-semibold mb-3 text-warning flex items-center gap-2">
+                    <Activity className="w-5 h-5" />
+                    Environmental Sensitivity
+                  </h4>
+                  <p className="text-muted-foreground">
+                    Many conductive polymer sensors are affected by humidity, whereas ideal wearable sensors must remain stable across 40% to 90% relative humidity for direct skin contact.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -79,9 +103,7 @@ export default function Research({ onNavigate }: ResearchProps) {
                 Material Architecture
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                The system utilizes an <span className="text-primary font-semibold">all-carbon, metal-free sensing approach</span>. 
-                Research foundations show that embedding carbon nanotubes (CNTs) or graphite into a PDMS 
-                (poly-dimethylsiloxane) elastomeric matrix creates a biocompatible and mechanically robust platform.
+                The system utilizes a <span className="text-primary font-semibold">metal-free, all-carbon sensing approach</span> to eliminate signal noise and corrosion common in traditional sensors. The architecture consists of a high-aspect-ratio conductive network (graphite or <span className="text-primary font-semibold">0.016 wt% single-walled CNTs</span>) embedded within a biocompatible PDMS elastomeric matrix. This provides a mechanically robust platform capable of handling up to <span className="text-primary font-semibold">25% strain and 140° bending</span>.
               </p>
             </div>
 
@@ -91,22 +113,32 @@ export default function Research({ onNavigate }: ResearchProps) {
                 <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl">
                   <h4 className="font-semibold mb-3 text-blue-700 dark:text-blue-300">Compressive Stress</h4>
                   <p className="text-sm text-muted-foreground">
-                    As the joint bends, the elastomeric matrix creates transverse compressive stress.
+                    As the joint bends, the positive Poisson's ratio of the PDMS creates transverse compressive stress within the sensor.
                   </p>
                 </div>
                 <div className="p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl">
                   <h4 className="font-semibold mb-3 text-green-700 dark:text-green-300">Network Reconfiguration</h4>
                   <p className="text-sm text-muted-foreground">
-                    This stress causes the conductive graphite/CNT particles to reorient, changing electrical resistance.
+                    This internal stress causes the 3D-networked conductive particles to reorient and reconfigure, leading to measurable changes in electrical resistance.
                   </p>
                 </div>
                 <div className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl">
                   <h4 className="font-semibold mb-3 text-purple-700 dark:text-purple-300">The "Reverse Effect"</h4>
                   <p className="text-sm text-muted-foreground">
-                    At high angles, resistance decreases as particles interlock more tightly, creating a stronger path for current.
+                    While the system shows a "Slight Forward Relation" (resistance increase) for subtle bends, major joint angles trigger the Reverse Effect. Conductive granules interlock more tightly, creating a stronger path for current and reducing overall resistance.
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-8 p-6 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
+              <div className="flex items-center gap-3 mb-3">
+                <Gauge className="w-6 h-6 text-primary" />
+                <h4 className="text-lg font-bold text-primary">Zero-Lag Performance</h4>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                This mechanism supports a rapid response time—approximately <span className="text-primary font-semibold">300-550 ms</span> for human joint movement—which is critical for real-time monitoring and injury prevention.
+              </p>
             </div>
           </div>
         </motion.div>
@@ -119,14 +151,14 @@ export default function Research({ onNavigate }: ResearchProps) {
         >
           <div className="glass rounded-2xl p-8">
             <h2 className="text-3xl font-bold mb-6 text-primary">Performance Metrics</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center p-6">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
                   <Gauge className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Response Time</h3>
                 <p className="text-3xl font-bold text-primary mb-2">200-550ms</p>
-                <p className="text-sm text-muted-foreground">Rapid detection for real-time monitoring</p>
+                <p className="text-sm text-muted-foreground">Rapid, instantaneous detection for real-time monitoring (200ms for robotic motion; 300-550ms for human joint tracking)</p>
               </div>
               <div className="text-center p-6">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center">
@@ -134,7 +166,7 @@ export default function Research({ onNavigate }: ResearchProps) {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Environmental Stability</h3>
                 <p className="text-3xl font-bold text-primary mb-2">40-90% RH</p>
-                <p className="text-sm text-muted-foreground">Invariant to humidity, ideal for skin contact</p>
+                <p className="text-sm text-muted-foreground">Performance is invariant to humidity, ensuring signal integrity during direct skin contact and sweat</p>
               </div>
               <div className="text-center p-6">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
@@ -142,7 +174,15 @@ export default function Research({ onNavigate }: ResearchProps) {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Dynamic Range</h3>
                 <p className="text-3xl font-bold text-primary mb-2">25% Strain</p>
-                <p className="text-sm text-muted-foreground">Up to 140° bending capability</p>
+                <p className="text-sm text-muted-foreground">High flexibility allows for precise measurement of extreme joint angles (fingers, wrist, and knees)</p>
+              </div>
+              <div className="text-center p-6">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-400 to-violet-500 rounded-full flex items-center justify-center">
+                  <RotateCw className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Mechanical Durability</h3>
+                <p className="text-3xl font-bold text-primary mb-2">&gt;100 Cycles</p>
+                <p className="text-sm text-muted-foreground">Demonstrates low hysteresis and high repeatability over extended use without mechanical fatigue</p>
               </div>
             </div>
           </div>
